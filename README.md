@@ -1,1 +1,1 @@
-##Mail Generator
+Mail Generator

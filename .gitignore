@@ -1,0 +1,9 @@
+# Ignore frontend dependencies
+# /client/node_modules
+# /frontend/package-lock.json
+# /frontend/yarn.lock
+
+# Ignore backend dependencies
+/server/node_modules
+/server/package-lock.json
+/server/yarn.lock

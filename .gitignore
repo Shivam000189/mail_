@@ -6,4 +6,4 @@
 # Ignore backend dependencies
 /server/node_modules
 /server/package-lock.json
-/server/yarn.lock
+/server/package.json

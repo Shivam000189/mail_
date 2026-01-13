@@ -4,8 +4,8 @@
 
 const generateEmail =  (req, res) => {
     const { topic } = req.body;
-    console.log(topic);
-    return res.json({msg:"Controller working"});
+    const generatedEmail = `This is a professional email about ${topic}`;
+    return res.json({email : generatedEmail });
 }
 
 

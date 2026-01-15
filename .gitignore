@@ -1,8 +1,10 @@
-Ignore frontend dependencies
+# Ignore frontend dependencies
 /client/node_modules
 
 
 # Ignore backend dependencies
 /server/node_modules
-/server/package-lock.json
-/server/package.json
+
+
+
+.env

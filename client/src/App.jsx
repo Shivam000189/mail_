@@ -41,9 +41,6 @@ function App() {
     setTemplates(saved);
   }, []);
 
-  const handleChange = () => {
-    if(!topic) return;
-  }
 
   const handleSave = () => {
         if (!email) return;

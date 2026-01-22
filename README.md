@@ -1,3 +1,6 @@
+APP link:- https://mail-khaki.vercel.app/
+
+
 ✉️ AI-Powered Email Generator
 
 A full-stack web application that generates professional emails using AI based on a user-provided topic and tone.

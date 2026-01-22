@@ -42,3 +42,214 @@
 .read-the-docs {
   color: #888;
 } */
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@500;700&family=DM+Sans:wght@400;500;600&display=swap'); */
+
+:root {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-tertiary: #242424;
+
+  --accent: #c9a961;
+  --accent-dim: #8b7645;
+
+  --text-primary: #e8e8e8;
+  --text-secondary: #a0a0a0;
+  --text-dim: #6b6b6b;
+
+  --border: #2d2d2d;
+
+  --user-msg: #2a2520;
+  --bot-msg: #1d1d1d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+  background: rgba(15, 15, 15, 0.95);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.logo-icon {
+  color: var(--accent);
+}
+
+.logo-text {
+  font-family: 'Crimson Pro', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #e8c584);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- TONE SELECTOR ---------- */
+
+.tone-selector {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  padding: 1.2rem 2rem;
+}
+
+.tone-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  margin-bottom: 0.8rem;
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.tone-options {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.tone-option {
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tone-option:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+.tone-option.active {
+  border-color: var(--accent);
+  background: linear-gradient(
+    135deg,
+    rgba(201, 169, 97, 0.15),
+    rgba(201, 169, 97, 0.05)
+  );
+}
+
+/* ---------- MESSAGES ---------- */
+
+.messages-container {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.empty-state {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  gap: 0.8rem;
+}
+
+.message {
+  margin-bottom: 1.2rem;
+}
+
+.message-content {
+  padding: 1rem 1.3rem;
+  border-radius: 14px;
+  line-height: 1.6;
+  max-width: 80%;
+}
+
+.message.user .message-content {
+  background: var(--user-msg);
+  border: 1px solid rgba(201, 169, 97, 0.25);
+  margin-left: auto;
+}
+
+.message.bot .message-content {
+  background: var(--bot-msg);
+  border: 1px solid var(--border);
+}
+
+/* ---------- INPUT ---------- */
+
+.input-container {
+  border-top: 1px solid var(--border);
+  background: rgba(15, 15, 15, 0.95);
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-end;
+}
+
+.input-textarea {
+  flex: 1;
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  color: var(--text-primary);
+  resize: none;
+  outline: none;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.input-textarea::placeholder {
+  color: var(--text-dim);
+}
+
+.input-textarea:focus {
+  border-color: var(--accent);
+}
+
+.send-button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  border: none;
+  color: #000;
+  border-radius: 12px;
+  padding: 0.7rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.send-button:hover {
+  transform: translateY(-2px);
+}
+
+.send-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

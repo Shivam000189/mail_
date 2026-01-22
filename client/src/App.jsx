@@ -46,7 +46,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "https://mail-1-d1nc.onrender.com",
+        "https://mail-1-d1nc.onrender.com/api/generate-email",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
